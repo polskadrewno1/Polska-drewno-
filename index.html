@@ -205,4 +205,692 @@ nav a:hover { color: #b27b31; }
   width: 90%;
   max-width: 390px;
   background: #593820;
-  border: 5px solid #3c281b
+  border: 5px solid #3c281b;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 12px 25px #0005;
+}
+
+.log-row {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin: 4px 0;
+}
+
+.log {
+  height: 30px;
+  flex: 1;
+  border-radius: 20px;
+  border: 3px solid #754b2c;
+  background: repeating-linear-gradient(
+    90deg, #bd8a52 0 12px, #9c693d 13px 17px, #d2a36b 18px 24px
+  );
+}
+
+.art-label {
+  position: absolute;
+  top: 18px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.benefits {
+  background: white;
+  padding: 25px 7%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.benefit {
+  text-align: center;
+  padding: 12px;
+}
+
+.benefit span {
+  display: block;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.benefit strong { color: var(--green); }
+
+.benefit p {
+  margin: 4px 0;
+  font-size: 13px;
+  color: #69736a;
+}
+
+.section {
+  padding: 75px 7%;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 25px;
+  margin-bottom: 32px;
+}
+
+.section-heading h2,
+.delivery-copy h2,
+.contact-copy h2 {
+  color: var(--green);
+  font-size: clamp(28px, 3.5vw, 40px);
+  line-height: 1.2;
+  margin: 8px 0;
+}
+
+.section-heading > p {
+  max-width: 390px;
+  color: #687268;
+  font-size: 14px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px #26352b10;
+  border: 1px solid #e8e1d5;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px #26352b18;
+}
+
+.product-visual {
+  min-height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-visual.oak { background: linear-gradient(135deg, #d9b27e, #805332); }
+.product-visual.birch { background: linear-gradient(135deg, #e8d7b6, #b69a72); }
+.product-visual.beech { background: linear-gradient(135deg, #c68c5c, #71432c); }
+
+.product-visual > span {
+  position: absolute;
+  top: 15px;
+  left: 16px;
+  color: white;
+  background: #183b2bbd;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.mini-logs {
+  width: 75%;
+  height: 95px;
+  position: relative;
+  border-radius: 8px;
+  background: repeating-linear-gradient(
+    0deg, #704323 0 18px, #9d6c3e 19px 35px, #58361f 36px 42px
+  );
+  border: 5px solid #593820;
+  box-shadow: 0 12px 20px #0003;
+  transform: rotate(-3deg);
+}
+
+.mini-logs::before,
+.mini-logs::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #d5ad77 0 22%, #875b35 24% 34%, #d5ad77 36% 50%, #6b4429 52%);
+  border: 2px solid #58361f;
+}
+
+.mini-logs::before { left: 10%; top: -22px; }
+.mini-logs::after { right: 10%; bottom: -20px; }
+
+.product-body { padding: 22px; }
+
+.product-tag {
+  font-size: 10px;
+  letter-spacing: 1.3px;
+  color: #a47535;
+  font-weight: bold;
+}
+
+.product-body h3 {
+  margin: 7px 0;
+  color: var(--green);
+  font-size: 22px;
+}
+
+.product-body p {
+  font-size: 13px;
+  color: #687268;
+  min-height: 62px;
+}
+
+.product-bottom {
+  border-top: 1px solid #eee7dc;
+  padding-top: 17px;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.price {
+  color: var(--green);
+  font-size: 23px;
+  font-weight: 900;
+}
+
+.text-button {
+  color: #9a682b;
+  font-weight: bold;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.fine-print {
+  font-size: 12px;
+  color: #73786f;
+  margin-top: 24px;
+}
+
+.delivery-section {
+  padding: 65px 7%;
+  background: #e9eee4;
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.delivery-art {
+  min-height: 300px;
+  background: linear-gradient(145deg, #c2d2b5, #78966e);
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.delivery-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: white;
+  display: grid;
+  place-items: center;
+  font-size: 70px;
+  box-shadow: 0 10px 25px #0002;
+  z-index: 1;
+}
+
+.delivery-lines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    135deg, transparent 0 32px, #ffffff22 33px 36px
+  );
+}
+
+.delivery-copy ul {
+  padding-left: 20px;
+  color: #526153;
+}
+
+.delivery-copy li { margin: 8px 0; }
+
+.button-green {
+  background: var(--green);
+  color: white;
+}
+
+.payment-section { background: white; }
+
+.payment-steps {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: center;
+  gap: 18px;
+}
+
+.payment-step {
+  background: var(--cream);
+  border: 1px solid #e7dfd0;
+  padding: 24px;
+  border-radius: 12px;
+  min-height: 180px;
+}
+
+.payment-step > span {
+  font-size: 28px;
+  font-weight: 900;
+  color: #bd8b48;
+}
+
+.payment-step h3 {
+  color: var(--green);
+  margin: 8px 0;
+}
+
+.payment-step p {
+  font-size: 13px;
+  color: #687268;
+}
+
+.step-arrow {
+  color: #b88b4e;
+  font-size: 25px;
+}
+
+.contact-section {
+  background: #173f2b;
+  color: white;
+  padding: 70px 7%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  align-items: start;
+}
+
+.contact-copy h2 { color: white; }
+
+.contact-copy p { color: #d9e4da; }
+
+.contact-form {
+  background: white;
+  color: var(--text);
+  padding: 28px;
+  border-radius: 14px;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 13px 0 5px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid #d8ded5;
+  border-radius: 6px;
+  padding: 12px;
+  font: inherit;
+  font-size: 14px;
+  background: #fff;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #9ab99e;
+  border-color: var(--green);
+}
+
+.full-button {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.form-note {
+  color: #687268;
+  font-size: 11px;
+  margin-bottom: 0;
+}
+
+footer {
+  background: #102d1e;
+  color: #d9e4da;
+  padding: 28px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+footer p { font-size: 12px; }
+footer > a:last-child { color: #e9bd78; font-size: 13px; }
+
+.menu-toggle {
+  display: none;
+  background: var(--green);
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 20px;
+}
+
+@media (max-width: 850px) {
+  header { padding: 15px 5%; flex-wrap: wrap; }
+  .menu-toggle { display: block; }
+  nav { display: none; width: 100%; flex-direction: column; align-items: stretch; gap: 0; }
+  nav.open { display: flex; }
+  nav a { padding: 12px; border-top: 1px solid #eee; }
+  .hero { grid-template-columns: 1fr; padding: 55px 6%; }
+  .hero-art { min-height: 260px; }
+  .section { padding: 55px 6%; }
+  .section-heading { display: block; }
+  .product-grid { grid-template-columns: 1fr; }
+  .product-body p { min-height: auto; }
+  .delivery-section { grid-template-columns: 1fr; padding: 50px 6%; gap: 30px; }
+  .payment-steps { grid-template-columns: 1fr; }
+  .step-arrow { text-align: center; transform: rotate(90deg); }
+  .contact-section { grid-template-columns: 1fr; padding: 50px 6%; gap: 25px; }
+  .benefits { padding: 20px 5%; gap: 5px; }
+  .benefit { padding: 8px 3px; }
+  .benefit strong { font-size: 12px; }
+  .benefit p { font-size: 11px; }
+  footer { padding: 25px 6%; }
+}
+
+@media (max-width: 420px) {
+  .brand strong { font-size: 18px; }
+  .hero h1 { font-size: 39px; }
+  .hero-note { line-height: 2; }
+  .contact-form { padding: 20px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topline">
+  SUCHE DREWNO OPAŁOWE • POLSKA • DOSTAWA DO UZGODNIENIA
+</div>
+
+<header>
+  <a class="brand" href="#home" aria-label="Polska Drewno — strona główna">
+    <span class="brand-mark">PD</span>
+    <span>
+      <strong>Polska Drewno</strong>
+      <small>DREWNO OPAŁOWE</small>
+    </span>
+  </a>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Otwórz menu">☰</button>
+
+  <nav id="nav">
+    <a href="#produkty">Nasze drewno</a>
+    <a href="#dostawa">Dostawa</a>
+    <a href="#platnosci">Płatności</a>
+    <a href="#kontakt" class="nav-cta">Zapytaj o ofertę</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="eyebrow">NATURALNE CIEPŁO TWOJEGO DOMU</p>
+    <h1>Dobre drewno.<br><em>Ciepły dom.</em></h1>
+    <p class="hero-copy">
+      Suche drewno opałowe, gotowe do palenia.
+      Wybierz dąb, brzozę lub buk i skontaktuj się z nami,
+      aby ustalić szczegóły zamówienia.
+    </p>
+
+    <div class="hero-actions">
+      <a class="button button-light" href="#produkty">Zobacz ofertę</a>
+      <a class="button button-outline" href="#kontakt">Skontaktuj się</a>
+    </div>
+
+    <div class="hero-note">
+      ✓ Suche drewno &nbsp; ✓ Jasne warunki &nbsp; ✓ Dostawa do uzgodnienia
+    </div>
+  </div>
+
+  <div class="hero-art" role="img" aria-label="Ilustracja drewna opałowego">
+    <div class="tree one"></div>
+    <div class="tree two"></div>
+    <div class="tree three"></div>
+
+    <div class="woodpile">
+      <div class="log-row"><div class="log"></div><div class="log"></div></div>
+      <div class="log-row"><div class="log"></div><div class="log"></div><div class="log"></div></div>
+      <div class="log-row"><div class="log"></div><div class="log"></div></div>
+      <div class="log-row"><div class="log"></div><div class="log"></div><div class="log"></div></div>
+    </div>
+
+    <div class="art-label">NATURALNIE • SOLIDNIE • CIEPŁO</div>
+  </div>
+</section>
+
+<section class="benefits" aria-label="Nasze atuty">
+  <div class="benefit">
+    <span>🌳</span>
+    <strong>Suche drewno</strong>
+    <p>Gotowe do palenia</p>
+  </div>
+  <div class="benefit">
+    <span>🚚</span>
+    <strong>Dostawa</strong>
+    <p>Termin do uzgodnienia</p>
+  </div>
+  <div class="benefit">
+    <span>✓</span>
+    <strong>Przejrzyste warunki</strong>
+    <p>Ustalenia przed zakupem</p>
+  </div>
+</section>
+
+<section class="section products-section" id="produkty">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">NASZA OFERTA</p>
+      <h2>Wybierz swoje drewno</h2>
+    </div>
+    <p>
+      Oferujemy suche drewno opałowe, gotowe do palenia.
+      Szczegóły zamówienia i dostawy ustalamy indywidualnie.
+    </p>
+  </div>
+
+  <div class="product-grid">
+
+    <article class="product-card">
+      <div class="product-visual oak">
+        <span>DĄB</span>
+        <div class="mini-logs"></div>
+      </div>
+      <div class="product-body">
+        <div class="product-tag">DREWNO TWARDE</div>
+        <h3>Drewno dębowe</h3>
+        <p>Suche drewno opałowe, gotowe do palenia. Dobry wybór do kominków i pieców.</p>
+        <div class="product-bottom">
+          <span class="price">480 zł</span>
+          <button class="text-button" data-product="Drewno dębowe">Zapytaj →</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <div class="product-visual birch">
+        <span>BRZOZA</span>
+        <div class="mini-logs"></div>
+      </div>
+      <div class="product-body">
+        <div class="product-tag">POPULARNY WYBÓR</div>
+        <h3>Drewno brzozowe</h3>
+        <p>Suche drewno opałowe, gotowe do palenia. Do kominka i codziennego ogrzewania.</p>
+        <div class="product-bottom">
+          <span class="price">440 zł</span>
+          <button class="text-button" data-product="Drewno brzozowe">Zapytaj →</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <div class="product-visual beech">
+        <span>BUK</span>
+        <div class="mini-logs"></div>
+      </div>
+      <div class="product-body">
+        <div class="product-tag">DREWNO OPAŁOWE</div>
+        <h3>Drewno bukowe</h3>
+        <p>Suche drewno opałowe, gotowe do palenia. Szczegóły zamówienia ustalamy indywidualnie.</p>
+        <div class="product-bottom">
+          <span class="price">520 zł</span>
+          <button class="text-button" data-product="Drewno bukowe">Zapytaj →</button>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <p class="fine-print">
+    Ceny przedstawiono bez określenia jednostki. Przed zamówieniem
+    potwierdź ilość, cenę całkowitą i koszt dostawy ze sprzedawcą.
+  </p>
+</section>
+
+<section class="delivery-section" id="dostawa">
+  <div class="delivery-art">
+    <div class="delivery-circle">🚚</div>
+    <div class="delivery-lines"></div>
+  </div>
+
+  <div class="delivery-copy">
+    <p class="eyebrow">PROSTO I PRZEJRZYŚCIE</p>
+    <h2>Dostawa dopasowana do Ciebie</h2>
+    <p>
+      Przed potwierdzeniem zamówienia ustalimy adres,
+      ilość drewna, koszt transportu i możliwy termin dostawy.
+    </p>
+    <ul>
+      <li>Ustal miejsce i termin dostawy</li>
+      <li>Potwierdź rodzaj i ilość drewna</li>
+      <li>Otrzymaj podsumowanie zamówienia</li>
+    </ul>
+    <a href="#kontakt" class="button button-green">Ustal dostawę</a>
+  </div>
+</section>
+
+<section class="section payment-section" id="platnosci">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">BEZ NIESPODZIANEK</p>
+      <h2>Jak działają płatności?</h2>
+    </div>
+    <p>Warunki płatności należy potwierdzić pisemnie przed zamówieniem.</p>
+  </div>
+
+  <div class="payment-steps">
+    <div class="payment-step">
+      <span>01</span>
+      <h3>Potwierdzenie</h3>
+      <p>Uzgadniamy rodzaj drewna, ilość, cenę i koszt dostawy.</p>
+    </div>
+
+    <div class="step-arrow">→</div>
+
+    <div class="payment-step">
+      <span>02</span>
+      <h3>50% zaliczki</h3>
+      <p>Po uzgodnieniu warunków klient wpłaca 50% ustalonej kwoty.</p>
+    </div>
+
+    <div class="step-arrow">→</div>
+
+    <div class="payment-step">
+      <span>03</span>
+      <h3>Pozostałe 50%</h3>
+      <p>Pozostała kwota jest płatna po dostawie, zgodnie z pisemnym uzgodnieniem.</p>
+    </div>
+  </div>
+
+  <p class="fine-print">
+    Przed dokonaniem płatności potwierdź całkowitą cenę, dane sprzedawcy
+    i warunki dostawy. Nie wysyłaj pieniędzy bez sprawdzenia zamówienia.
+  </p>
+</section>
+
+<section class="contact-section" id="kontakt">
+  <div class="contact-copy">
+    <p class="eyebrow">MASZ PYTANIA?</p>
+    <h2>Porozmawiajmy o drewnie</h2>
+    <p>
+      Chcesz zamówić drewno lub dowiedzieć się więcej?
+      Wypełnij formularz i przygotuj wiadomość e-mail.
+    </p>
+    <p>Odpowiemy na pytania dotyczące rodzaju drewna, ceny i dostawy.</p>
+  </div>
+
+  <form class="contact-form" id="contactForm">
+    <label for="name">Imię</label>
+    <input id="name" name="name" required placeholder="Twoje imię">
+
+    <label for="email">Adres e-mail</label>
+    <input id="email" name="email" type="email" required placeholder="twoj@email.pl">
+
+    <label for="product">Interesujący produkt</label>
+    <select id="product" name="product">
+      <option value="Drewno dębowe">Drewno dębowe — 480 zł</option>
+      <option value="Drewno brzozowe">Drewno brzozowe — 440 zł</option>
+      <option value="Drewno bukowe">Drewno bukowe — 520 zł</option>
+      <option value="Inne / nie wiem jeszcze">Inne / nie wiem jeszcze</option>
+    </select>
+
+    <label for="message">Wiadomość</label>
+    <textarea id="message" name="message" rows="4" required
+      placeholder="Podaj ilość drewna i miejscowość dostawy"></textarea>
+
+    <button class="button button-green full-button" type="submit">
+      Przygotuj zapytanie
+    </button>
+
+    <p class="form-note">
+      Po kliknięciu otworzy się aplikacja e-mail z przygotowaną wiadomością.
+      Aby wysłać zapytanie, należy nacisnąć przycisk „Wyślij” w tej aplikacji.
+    </p>
+  </form>
+</section>
+
+</main>
+
+<footer>
+  <a class="brand footer-brand" href="#home">
+    <span class="brand-mark">PD</span>
+    <span>
+      <strong style="color:white">Polska Drewno</strong>
+      <small>DREWNO OPAŁOWE</small>
+    </span>
+  </a>
+
+  <p>© <span id="year"></span> Polska Drewno. Wszelkie prawa zastrzeżone.</p>
+  <a href="#home">Wróć na górę ↑</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
