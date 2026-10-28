@@ -8,6 +8,7 @@ if (menuToggle && nav) {
 }
 
 const year = document.getElementById("year");
+
 if (year) {
   year.textContent = new Date().getFullYear();
 }
@@ -33,8 +34,26 @@ if (contactForm) {
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    alert(
-      "Formularz kontaktowy jest jeszcze w konfiguracji. Prosimy o kontakt ze sprzedawcą."
+    const name = document.getElementById("name")?.value.trim() || "";
+    const email = document.getElementById("email")?.value.trim() || "";
+    const product = document.getElementById("product")?.value || "";
+    const message = document.getElementById("message")?.value.trim() || "";
+
+    if (!name || !email || !message) {
+      alert("Proszę wypełnić wszystkie wymagane pola.");
+      return;
+    }
+
+    const recipient = "chevelardi@gmail.com";
+    const subject = encodeURIComponent(
+      "Zapytanie ze strony Polska Drewno"
     );
+
+    const body = encodeURIComponent(
+      `Imię: ${name}\nAdres e-mail klienta: ${email}\nProdukt: ${product}\nWiadomość: ${message}`
+    );
+
+    window.location.href =
+      `mailto:${recipient}?subject=${subject}&body=${body}`;
   });
 }
