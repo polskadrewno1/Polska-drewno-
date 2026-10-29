@@ -995,7 +995,31 @@ footer > a:last-child { color: #e9bd78; font-size: 13px; }
   <option value="Inne / nie wiem jeszcze">Inne / nie wiem jeszcze</option>
 </select>
 
-    <label for="message">Wiadomość</label>
+       <label for="whatsapp">Numer WhatsApp</label>
+    <input
+      id="whatsapp"
+      name="whatsapp"
+      type="tel"
+      required
+      placeholder="Np. +48 123 456 789"
+    >
+
+    <label for="quantity">Ilość drewna</label>
+    <input
+      id="quantity"
+      name="quantity"
+      type="number"
+      min="1"
+      step="0.5"
+      required
+      placeholder="Podaj ilość"
+    >
+
+    <label for="unit">Jednostka</label>
+    <select id="unit" name="unit" required>
+      <option value="Stère">Stère</option>
+      <option value="m³">m³</option>
+    </select> <label for="message">Wiadomość</label>
     <textarea id="message" name="message" rows="4" required
       placeholder="Podaj ilość drewna i miejscowość dostawy"></textarea>
 
